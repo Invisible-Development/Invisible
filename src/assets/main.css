@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1990B2;
+  --primary-color-inverted: #e66f4d;
+  --secondary-color: #0C4859;
+  --secondary-color-inverted: #f3b7a6;
+  --primary-color-dark: #141414;
+  --secondary-color-dark: #000;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color-dark);
+}  
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+body {
+  background: linear-gradient(to right, var(--primary-color-dark), var(--secondary-color-dark));
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: 'Grisly Beast';
+  src: url('../font/GrislyBeast.ttf');
+}
+
+@font-face {
+  font-family: 'Strenuous';
+  src: url('../font/strenuous.otf');
+}
+
+.font-primary {
+  font-family: 'Strenuous';
+}
+
+.font-secondary {
+  font-family: 'Grisly Beast';
+}
+
+.blurred {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.hidden-animation {
+  display: none;
+  opacity: 0;
+}
+
+.shown-animation {
+  display: block;
+  animation-iteration-count: 1;
+  animation: opacity 2s;
+  -moz-animation: opacity 2s;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: opacity 2s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.hover:hover {
+  color: var(--primary-color-inverted);
+  cursor: pointer;
+}
+
+@keyframes opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes opacity {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+@media screen and (max-width:500px) {
+  #nav {
+    margin-left: 0;
+  }
+  #logo {
+    margin-right: 0;
+  }
+  #icon {
+    margin-left: 0px;
+  }
+  .text-8xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .text-2xl {
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:1000px) {
+  #nav {
+    margin-left: 0;
+  }
+  #logo {
+    margin-right: 2px;
+  }
+  #icon {
+    margin-left: 0px;
+  }
+  .text-8xl {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+  .text-2xl {
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width:1000px) and (max-width:1400px) {
+  #nav {
+    margin-left: 0;
+  }
+  #logo {
+    margin-right: 2px;
+  }
+  #icon {
+    margin-left: 0px;
+  }
+  .text-8xl {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .text-2xl {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}
+
+@media screen and (min-width:1400) and (max-width:1500px) {}
+
+@media screen and (min-width:1500px) {}
