@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import { Slide } from "react-awesome-reveal";
 
+//eslint-disable-next-line
 function hasAdminPermission(permissionCode) {
     const permission = {
       'CREATE_INSTANT_INVITE': 0x1,

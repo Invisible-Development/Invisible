@@ -10,6 +10,7 @@ function DiscordLogin() {
     const code = queryParams.get('code');
     const token = cookies.get('token');
     const [servers, setServers] = useState("Invalid Code");
+    //eslint-disable-next-line
     const list = new Array();
     console.log(process.env.REACT_APP_CLIENT_SECRET)
 
