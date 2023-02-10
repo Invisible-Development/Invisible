@@ -4,13 +4,13 @@ import { Slide } from "react-awesome-reveal";
 function Collin() {
   return (
   <Slide left>
-      <div className="w-4/12 bg-gray-900 rounded-xl shadow p-8 m-10">
-        <h1 className="font-primary text-cyan-600 text-8xl">Collin</h1>
-        <h1 className="font-primary text-cyan-600 text-2xl">Lead Developer</h1>
+      <div className="bg-purple-700 rounded-xl w-fit m-10 mt-20">
+        <h1 className="font-primary text-fuchsia-600 text-8xl pt-8 px-8">Collin</h1>
+        <h1 className="font-primary text-fuchsia-600 text-2xl pb-8 px-8">Lead Developer</h1>
       </div>
-      <div className="">
-        <h1 className="font-primary m-10 text-cyan-600 text-8xl">About me</h1>
-        <p className="font-primary m-10 text-cyan-800 text-2xl">
+      <div>
+        <h1 className="font-primary m-10 text-fuchsia-600 text-8xl">About me</h1>
+        <p className="font-primary m-10 text-fuchsia-700 text-2xl">
           Currently in  High School
           <br></br><br></br>
           Sports: Baseball, Basketball, and Football

@@ -8,6 +8,7 @@ import Contact from './components/pages/contact'
 
 import DiscordLogin from './components/pages/discord/login'
 import Server from './components/pages/discord/server'
+import Dashboard from './components/pages/discord/dashboard'
 
 import Collin from './components/pages/contributors/Collin';
 
@@ -25,8 +26,10 @@ root.render(
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+
         <Route path="/discord/login" element={<DiscordLogin />}/>
         <Route path="/discord/server/:id" element={<Server />} />
+        <Route path="/discord/dashboard" element={<Dashboard />} />
 
         <Route path="/contributors/Collin" element={<Collin />}/>
       </Routes>

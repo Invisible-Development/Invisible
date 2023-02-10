@@ -12,7 +12,6 @@ function DiscordLogin() {
     const [servers, setServers] = useState("Invalid Code");
     //eslint-disable-next-line
     const list = new Array();
-    console.log(process.env.REACT_APP_CLIENT_SECRET)
 
     if (token) {
         axios.get("https://discord.com/api/v10/users/@me/guilds", {
@@ -23,7 +22,7 @@ function DiscordLogin() {
             }).then(function (response) {
                response["data"].forEach(function (server, i) {
                   var href = `/discord/server/${server["id"]}`
-                  list.push(<a className="hover" key={i} href={href}>{server["name"]}<br></br></a>)
+                  list.push(<div className="my-3"><a className="text-fuchsia-700 hover:text-cyan-600 font-primary m-10 text-2xl " key={i} href={href}>{server["name"]}<br></br></a></div>)
                 })
             }).then(function (){
                 setServers(list)
@@ -36,9 +35,8 @@ function DiscordLogin() {
                 'https://discord.com/api/oauth2/token', // OAuth 2.0 token endpoint
                 '1051162194722685039',
                 process.env.REACT_APP_CLIENT_SECRET,
-                `${process.env.REACT_APP_BASE_URL}/discord/login` // Redirect URL for your app
+                `${process.env.REACT_APP_BASE_URL}/discord/dashboard` // Redirect URL for your app
               )
-              console.log("code")
               getAuthorizationCode(code, 'identify guilds').then(function(response) {
                 const access_token = response["access_token"]
                 axios.get("https://discord.com/api/v10/users/@me/guilds", {
@@ -49,7 +47,7 @@ function DiscordLogin() {
                     }).then(function (response) {
                        response["data"].forEach(function (server, i) {
                           var href = `/discord/server/${server["id"]}`
-                          list.push(<a className="my-5 hover" key={i} href={href}>{server["name"]}<br></br></a>)
+                          list.push(<div><a className="my-5 text-fuchsia-700 hover:text-cyan-600 font-primary m-10 text-2xl" key={i} href={href}>{server["name"]}<br></br></a></div>)
                         })
                     }).then(function (){
                         setServers(list)
@@ -66,14 +64,12 @@ function DiscordLogin() {
     
     return (
         <Slide left>
-            <div className="bg-gray-900 rounded-xl shadow w-fit m-10">
-                <h1 className="font-primary text-cyan-600 text-8xl pt-8 pb-8 px-8">Discord Servers</h1>
+            <div className="bg-purple-700 rounded-xl shadow w-fit m-10 mt-20">
+                <h1 className="font-primary text-fuchsia-600 text-8xl pt-8 pb-8 px-8">Discord Servers</h1>
             </div>
-            <div className="">
-                <p className="font-primary m-10 text-cyan-800 text-2xl">
-                    {servers}
-                </p>
-            </div>
+
+            {servers}
+
     </Slide>
     )
 }

@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
   ],
   presets: [],
   darkMode: 'media', // or 'class'
@@ -311,6 +312,7 @@ module.exports = {
       30: '30deg',
       60: '60deg',
       90: '90deg',
+      // '135': '135deg',
       180: '180deg',
     },
     invert: {
