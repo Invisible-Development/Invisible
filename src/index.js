@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Index from './components/pages/index';
-import About from './components/pages/about';
-import Contact from './components/pages/contact'
+import Index from './pages/index';
+import About from './pages/about';
+import Contact from './pages/contact'
 
-import DiscordLogin from './components/pages/discord/login'
-import Server from './components/pages/discord/server'
-import Dashboard from './components/pages/discord/dashboard'
+import DiscordLogin from './pages/discord/login'
+import Server from './pages/discord/server'
+import Dashboard from './pages/discord/dashboard'
 
-import Collin from './components/pages/contributors/Collin';
+import Collin from './pages/contributors/Collin';
 
 import NavBar from './components/navbar';
 import Footer from './components/footer'
