@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Grisly Beast';
+  src: url('../font/GrislyBeast.ttf');
+}
+
+@font-face {
+  font-family: 'Strenuous';
+  src: url('../font/strenuous.otf');
+}
+
+.font-primary {
+  font-family: 'Strenuous';
+}
+
+.font-secondary {
+  font-family: 'Grisly Beast';
+}
