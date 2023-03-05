@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-
-}
-
 * {
     padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 1;
+    overflow-x: none;
 }
 
 html,
 body {
   scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: none;
+
 }
 
 @font-face {
@@ -32,4 +34,15 @@ body {
 
 .font-secondary {
   font-family: 'Grisly Beast';
+}
+
+@keyframes fadeInLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
