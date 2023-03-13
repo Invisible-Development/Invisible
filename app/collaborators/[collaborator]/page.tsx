@@ -5,24 +5,24 @@ import FadeInLeft from '../../actions/fadeInLeft'
 
 // anyone else on this proj in the future only do 5 songs also please
 const collinSongs = [
-    <iframe className="my-2" src="https://open.spotify.com/embed/track/4jx9GqqVMPacAOKHaFlsLb?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
-    <iframe className="my-2" src="https://open.spotify.com/embed/track/1iAPK2b2b85n47c1Hw0pm4?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
-    <iframe className="my-2" src="https://open.spotify.com/embed/track/1uULQtJ8rbsX5TwjPpPc9Q?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
-    <iframe className="my-2" src="https://open.spotify.com/embed/track/2Gn3xsO0hacXJy1Z2EHrgm?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
-    <iframe className="my-2" src="https://open.spotify.com/embed/track/6MFk8Dw2VnvweH2E46cjEv?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe key={1} className="my-2" src="https://open.spotify.com/embed/track/4jx9GqqVMPacAOKHaFlsLb?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
+    <iframe key={2}className="my-2" src="https://open.spotify.com/embed/track/1iAPK2b2b85n47c1Hw0pm4?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
+    <iframe key={3}className="my-2" src="https://open.spotify.com/embed/track/1uULQtJ8rbsX5TwjPpPc9Q?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
+    <iframe key={4}className="my-2" src="https://open.spotify.com/embed/track/2Gn3xsO0hacXJy1Z2EHrgm?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>,
+    <iframe key={5} className="my-2" src="https://open.spotify.com/embed/track/6MFk8Dw2VnvweH2E46cjEv?utm_source=generator&theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 ]
 
 const collaboratorData = [
     { name: "collin", description: "I started this project in late november 2022, I have been working on this for a long time and coding js and py websites is a very different experience than I thought it would be, and it is also very easy, much easier than I thought", aboutMe: "I'm in highschool in America, I love snowboarding, and I play football, basketball, baseball, and I run track", spotifyEmbeds: collinSongs }
 ]
 
-function page({ params }) {
+function Collaborator({ params }) {
   const [data, setData] = useState(<Loader />)
   useEffect(() => {
-    collaboratorData.forEach((e) => {
+    collaboratorData.forEach((e, i) => {
         if (e["name"] === params.collaborator) {
             setData(
-                <div className="font-primary text-fuchsia-600 text-2xl">
+                <div className="font-primary text-fuchsia-600 text-2xl" key={i}>
                     <section>
                         <div className="border-t-4 border-purple-900 rounded-xl w-[50vw] m-auto mb-10"></div>
                         <h1 className="text-3xl">Description</h1>
@@ -62,4 +62,4 @@ function page({ params }) {
   )
 }
 
-export default page
+export default Collaborator

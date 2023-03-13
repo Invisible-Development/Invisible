@@ -1,7 +1,8 @@
+'use client'
 // Note: use this as <FadeInLeft><children /></FadeInLeft>
 import React, { useEffect } from 'react'
 
-export default function fadeInLeft(props) {
+export default function FadeInLeft(props) {
   useEffect(() => {
 
     const observer = new IntersectionObserver((entries) => {

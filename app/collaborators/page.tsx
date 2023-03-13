@@ -6,7 +6,7 @@ const collaborators = [
     { name: "Collin", href: "/collaborators/collin" }
 ]
 
-function page() {
+function Moon() {
   return (
     <>
         <FadeInLeft>
@@ -25,4 +25,4 @@ function page() {
   )
 }
 
-export default page
+export default Moon
