@@ -17,8 +17,11 @@ export default function fadeInLeft(props) {
     elements.forEach((el) => {observer.observe(el)});
   })
   return (
-    <div id="children" className="opacity-0">
+    <>
+      <div id="children" className="opacity-0">
         {props.children}
-    </div>
+      </div>
+    </>
   )
 }
+

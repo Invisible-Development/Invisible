@@ -18,6 +18,9 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      loader1: 'loader1 .6s infinite',
+      loader2: 'loader2 .6s infinite',
+      loader3: 'loader3 .6s infinite',
       fadeInLeft: 'fadeInLeft 1s ease-in-out',
     },
     aria: {
@@ -553,6 +556,40 @@ module.exports = {
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
       },
+      fadeInLeft: {
+        '0%': {
+          opacity: '0',
+          transform: 'translateX(-30px)'
+        },
+        '100%': {
+          opacity: '1',
+          transform: 'translateX(0px)'
+        }
+      },
+      loader1: {
+        '0%, 100%': {
+          transform: 'none',
+        },
+        '35%': {
+          transform: 'translateY(-95%)',
+        },
+      },
+      loader2: {
+        '0%, 100%': {
+          transform: 'none',
+        },
+        '50%': {
+          transform: 'translateY(-85%)',
+        },
+      },
+      loader3: {
+        '0%, 100%': {
+          transform: 'none',
+        },
+        '65%': {
+          transform: 'translateY(-75%)',
+        },
+      }
     },
     letterSpacing: {
       tighter: '-0.05em',
